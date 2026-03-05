@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flow FavManager — Advanced Favorites Manager for Kodi | Organize, Customize & Protect</title>
+  <meta name="description"
+    content="Flow FavManager is the ultimate addon for managing favorites in Kodi. Organize with unlimited profiles, customize colors and icons, create backups, protect with PIN and much more. Compatible with all platforms. Free and open source.">
+  <meta name="keywords"
+    content="Kodi, Kodi addon, Kodi favorites, favorites manager, Flow FavManager, customize Kodi, Kodi profiles, Kodi backup, Kodi plugin, Kodi program, organize favorites, kodi addon manager, kodi favorites manager, kodi customization, kodi utility">
+  <meta name="author" content="RubénSDFA1labernt">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="theme-color" content="#1B2838">
+  <link rel="canonical" href="https://loioloio.github.io/Flow-FavManager/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Flow FavManager — Advanced Favorites Manager for Kodi">
+  <meta property="og:description"
+    content="Organize, customize colors and icons, create independent profiles, backups and much more. Free and open-source addon for Kodi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://loioloio.github.io/Flow-FavManager/">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/loioloio/Flow-FavManager/main/plugin.program.flowfavmanager/icon.png">
+  <meta property="og:image:alt" content="Flow FavManager Logo — Star with wave on navy background">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:site_name" content="Flow FavManager">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flow FavManager — Addon for Kodi">
+  <meta name="twitter:description"
+    content="Advanced favorites manager for Kodi: organize, customize, create backups and more.">
+  <meta name="twitter:image"
+    content="https://raw.githubusercontent.com/loioloio/Flow-FavManager/main/plugin.program.flowfavmanager/icon.png">
+
+  <!-- Alternate languages -->
+  <link rel="alternate" hreflang="en" href="https://loioloio.github.io/Flow-FavManager/">
+  <link rel="alternate" hreflang="es" href="https://loioloio.github.io/Flow-FavManager/">
+  <link rel="alternate" hreflang="x-default" href="https://loioloio.github.io/Flow-FavManager/">
+
+  <link rel="icon" type="image/png" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Flow FavManager",
+    "description": "Advanced favorites manager for Kodi. Organize, customize colors and icons, create independent profiles, backups and much more.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Windows, Linux, macOS, Android, iOS",
+    "softwareVersion": "1.0.1",
+    "author": {
+      "@type": "Person",
+      "name": "RubénSDFA1labernt",
+      "url": "https://github.com/loioloio"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://github.com/loioloio/Flow-FavManager",
+    "downloadUrl": "https://github.com/loioloio/Flow-FavManager/releases",
+    "image": "https://raw.githubusercontent.com/loioloio/Flow-FavManager/main/plugin.program.flowfavmanager/icon.png",
+    "inLanguage": ["en", "es", "pt", "fr", "de", "it"],
+    "isAccessibleForFree": true,
+    "license": "https://github.com/loioloio/Flow-FavManager/blob/main/LICENSE.txt"
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-brand">
+        <img src="../icon.png" alt="Flow FavManager Logo">
+        <span>Flow FavManager</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#installation">Installation</a>
+        <a href="#languages">Languages</a>
+        <a href="#info">Info</a>
+        <a href="https://github.com/loioloio/Flow-FavManager" target="_blank" rel="noopener" class="nav-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          GitHub
+        </a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Addon for Kodi
+        </div>
+        <h1>
+          <span class="flow">Flow</span> FavManager
+        </h1>
+        <p class="hero-description">
+          The advanced favorites manager that transforms your Kodi experience.
+          Organize, customize colors and icons, create independent profiles,
+          backups and much more — all from an intuitive interface.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://github.com/loioloio/Flow-FavManager" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            View on GitHub
+          </a>
+          <a href="#installation" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            How to Install
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="number">v1.0.1</div>
+            <div class="label">Version</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">7</div>
+            <div class="label">Languages</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">30+</div>
+            <div class="label">Features</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">100%</div>
+            <div class="label">Privacy</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-icon-container">
+          <div class="hero-icon-glow"></div>
+          <img src="../icon.png" alt="Flow FavManager Icon">
+          <div class="orbit-ring">
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Powerful <span class="highlight">Features</span></h2>
+      <p class="section-subtitle">
+        Over 30 tools designed to give you total control over your Kodi favorites.
+      </p>
+      <div class="features-grid">
+
+
+        <div class="feature-card animate-in">
+          <div class="feature-icon profiles"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 00-3-3.87" />
+              <path d="M16 3.13a4 4 0 010 7.75" />
+            </svg></div>
+          <h3>List & Profile Management</h3>
+          <ul>
+            <li><strong>Multi-Profile:</strong> Create unlimited profiles (independent JSON files) to separate
+              environments like "Kids", "Sports", "Movies".</li>
+            <li><strong>Import & Export:</strong> Easily share profiles or move them between devices using XML files.
+            </li>
+            <li><strong>System Templates:</strong> Predefined and editable lists with shortcuts to sections and useful
+              Kodi commands.</li>
+            <li><strong>Dynamic Widget:</strong> Specialized <code>/widget</code> path to integrate favorites as clean
+              folders into widgets of advanced skins (Aura, Arctic, Titan, etc.).</li>
+          </ul>
+        </div>
+
+
+        <div class="feature-card animate-in">
+          <div class="feature-icon visual"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-1 0-.83.67-1.5 1.5-1.5H16c3.31 0 6-2.69 6-6 0-4.96-4.48-9-10-9z" />
+              <circle cx="6.5" cy="11.5" r="1.5" fill="currentColor" />
+              <circle cx="9.5" cy="7.5" r="1.5" fill="currentColor" />
+              <circle cx="14.5" cy="7.5" r="1.5" fill="currentColor" />
+              <circle cx="17.5" cy="11.5" r="1.5" fill="currentColor" />
+            </svg></div>
+          <h3>Visual Editing & Customization</h3>
+          <ul>
+            <li><strong>Pop-up Editor:</strong> User-friendly and fast interface to edit your favorites' properties.
+            </li>
+            <li><strong>Total Customization:</strong> Change text color, apply formatting (bold/italics) and adjust font
+              and icon sizes.</li>
+            <li><strong>Icon Management:</strong> Automatic icon assignment or manual selection of custom images.</li>
+            <li><strong>Separator Bars:</strong> Insert divider lines or texts to visually organize your lists.</li>
+            <li><strong>Accessibility:</strong> Interface scaling, high-contrast modes and adapted palettes.</li>
+          </ul>
+        </div>
+
+
+        <div class="feature-card animate-in">
+          <div class="feature-icon organization"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg></div>
+          <h3>Organization & Automation</h3>
+          <ul>
+            <li><strong>Quick Sorting:</strong> Sort your favorites quickly and easily.</li>
+            <li><strong>Bulk Operations:</strong> Multi-selection to move, delete or color items in groups.</li>
+            <li><strong>Auto Grouping:</strong> Intelligent algorithm that groups favorites by their source addon with a
+              single click.</li>
+            <li><strong>Search & Filter:</strong> Sorting tools (A-Z, Z-A, Reverse) and real-time text filtering to
+              quickly find content.</li>
+          </ul>
+        </div>
+
+
+        <div class="feature-card animate-in">
+          <div class="feature-icon creation"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+            </svg></div>
+          <h3>Creation & Manipulation</h3>
+          <ul>
+            <li><strong>Manual Creation:</strong> Create favorites from scratch by typing the path, edit existing
+              commands or duplicate entries.</li>
+            <li><strong>Addon Selector:</strong> Integrated search to add favorites from any installed addon without
+              leaving the editor.</li>
+            <li><strong>Global Context Menu:</strong> Add content to Flow FavManager from anywhere in Kodi using the
+              context menu.</li>
+            <li><strong>Compatibility Maximizer:</strong> Automatically corrects problematic URLs to ensure all
+              favorites execute correctly.</li>
+          </ul>
+        </div>
+
+
+        <div class="feature-card animate-in">
+          <div class="feature-icon security"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg></div>
+          <h3>Security & Maintenance</h3>
+          <ul>
+            <li><strong>PIN Protection:</strong> Lock access to the editor or profiles with a numeric code and
+              intelligent session locking.</li>
+            <li><strong>Rescue System:</strong> Recover your password via security question. As a last resort, create a
+              <code>reset_pass.txt</code> file.
+            </li>
+            <li><strong>Audit Log:</strong> Internal log of critical actions for total control.</li>
+            <li><strong>Backup System:</strong> Comprehensive tools to create backups and restore your
+              <code>favourites.xml</code> file.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Preview -->
+  <section class="preview" id="preview">
+    <div class="container">
+      <h2 class="section-title">See it in <span class="highlight">Action</span></h2>
+      <p class="section-subtitle">
+        A glimpse of Flow FavManager running inside Kodi.
+      </p>
+      <div class="preview-image animate-in">
+        <img src="screenshot1.png" alt="Flow FavManager running inside Kodi — addon interface screenshot"
+          loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation -->
+  <section class="installation" id="installation">
+    <div class="container">
+      <h2 class="section-title">How to <span class="highlight">Install</span></h2>
+      <p class="section-subtitle">
+        Two simple methods to install Flow FavManager on your Kodi.
+      </p>
+      <div class="install-grid">
+
+
+        <div class="install-method animate-in">
+          <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
+            </svg>
+            From Kodi File Manager
+          </h3>
+          <p class="method-desc">The simplest method. No external file downloads required and enables automatic updates.
+          </p>
+          <div class="install-steps">
+            <div class="install-step">
+              <p>Open Kodi and go to <strong>Settings</strong> (gear icon).</p>
+            </div>
+            <div class="install-step">
+              <p>Enter <strong>File manager</strong> and select <strong>Add source</strong>.</p>
+            </div>
+            <div class="install-step">
+              <p>Click on <code>&lt;None&gt;</code> and type this address exactly:<br>
+                <code>https://loioloio.github.io/Flow-FavManager/</code>
+              </p>
+            </div>
+            <div class="install-step">
+              <p>Give the source a name (e.g. <code>flowfav</code>) and click OK.</p>
+            </div>
+            <div class="install-step">
+              <p>Return to the main menu, enter <strong>Add-ons</strong> and click the open box icon (top left).</p>
+            </div>
+            <div class="install-step">
+              <p>Select <strong>Install from zip file</strong>.</p>
+            </div>
+            <div class="install-step">
+              <p>Choose the <code>flowfav</code> source and select <code>repository.flowfavmanager-1.0.0.zip</code>.</p>
+            </div>
+            <div class="install-step">
+              <p>Wait for the <em>"Add-on installed"</em> notification (this installs the repository).</p>
+            </div>
+            <div class="install-step">
+              <p>In the same menu, select <strong>Install from repository</strong>.</p>
+            </div>
+            <div class="install-step">
+              <p>Go to <strong>Flow FavManager Repository</strong> &rarr; <strong>Program add-ons</strong> &rarr;
+                <strong>Flow FavManager</strong> and install.
+              </p>
+            </div>
+          </div>
+          <div class="install-warning">
+            <span class="warn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
+              </svg></span>
+            <span><strong>VERY IMPORTANT:</strong> You must type the address exactly. DO NOT copy the URL from your
+              browser bar (github.com...), as it will not work in Kodi and will result in an empty folder. If a security
+              warning appears, go to Settings and enable "Unknown sources".</span>
+          </div>
+        </div>
+
+
+        <div class="install-method animate-in">
+          <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Manual Installation via ZIP
+          </h3>
+          <p class="method-desc">If you prefer to download the file manually from GitHub.</p>
+          <div class="install-steps">
+            <div class="install-step">
+              <p>Download the <code>repository.flowfavmanager-1.0.0.zip</code> file from the <a
+                  href="https://github.com/loioloio/Flow-FavManager/releases" target="_blank" rel="noopener"
+                  style="color: var(--accent-blue); text-decoration: underline;">Releases</a> section on GitHub.</p>
+            </div>
+            <div class="install-step">
+              <p>In Kodi, go to <strong>Add-ons</strong> &rarr; <strong>Box icon</strong> &rarr; <strong>Install from
+                  zip file</strong>.</p>
+            </div>
+            <div class="install-step">
+              <p>Locate the downloaded file on your device and select it to complete the installation.</p>
+            </div>
+          </div>
+          <div class="install-warning">
+            <span class="warn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="16" x2="12" y2="12" />
+                <line x1="12" y1="8" x2="12.01" y2="8" />
+              </svg></span>
+            <span><strong>Language support:</strong> If the addon is not in your preferred language after installation,
+              check the <a href="https://github.com/loioloio/Flow-FavManager/releases" target="_blank" rel="noopener"
+                style="color: var(--accent-gold); text-decoration: underline;">Releases</a> section for
+              more language options.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages -->
+  <section class="languages" id="languages">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">Multilanguage</span> Support</h2>
+      <p class="section-subtitle">
+        Flow FavManager is available in 7 languages for a barrier-free experience.
+      </p>
+      <div class="languages-grid">
+        <div class="lang-card animate-in">
+          <div class="lang-flag">EN</div>
+          <div class="lang-name">English</div>
+          <div class="lang-code">en_gb / en_us</div>
+        </div>
+        <div class="lang-card animate-in">
+          <div class="lang-flag">ES</div>
+          <div class="lang-name">Español</div>
+          <div class="lang-code">es_es</div>
+        </div>
+        <div class="lang-card animate-in">
+          <div class="lang-flag">PT</div>
+          <div class="lang-name">Português</div>
+          <div class="lang-code">pt_br</div>
+        </div>
+        <div class="lang-card animate-in">
+          <div class="lang-flag">FR</div>
+          <div class="lang-name">Français</div>
+          <div class="lang-code">fr_fr</div>
+        </div>
+        <div class="lang-card animate-in">
+          <div class="lang-flag">DE</div>
+          <div class="lang-name">Deutsch</div>
+          <div class="lang-code">de_de</div>
+        </div>
+        <div class="lang-card animate-in">
+          <div class="lang-flag">IT</div>
+          <div class="lang-name">Italiano</div>
+          <div class="lang-code">it_it</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info -->
+  <section class="info-section" id="info">
+    <div class="container">
+      <h2 class="section-title">Additional <span class="highlight">Information</span></h2>
+      <p class="section-subtitle">
+        Everything you need to know about requirements, privacy and support.
+      </p>
+      <div class="info-grid">
+        <div class="info-card animate-in">
+          <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2" />
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+              <path d="M9 14l2 2 4-4" />
+            </svg> Requirements</h3>
+          <ul>
+            <li>Compatible with <strong>any version of Kodi</strong>.</li>
+            <li>No complex dependencies required.</li>
+            <li>Works on all platforms: Windows, Linux, macOS, Android, iOS, Raspberry Pi.</li>
+          </ul>
+        </div>
+        <div class="info-card animate-in">
+          <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+            </svg> Privacy</h3>
+          <ul>
+            <li>This addon <strong>does not collect, store or send personal data</strong>.</li>
+            <li>All processing is performed locally on your device.</li>
+            <li>Source code available for review on GitHub.</li>
+          </ul>
+        </div>
+        <div class="info-card animate-in">
+          <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+              <path d="M12 8v4" />
+              <path d="M12 16h.01" />
+            </svg> Legal Notice</h3>
+          <p>Flow FavManager is an organization tool. The software is provided "as is", without warranty of any kind.
+            The author is not responsible for possible data loss. Regular backups are recommended.</p>
+        </div>
+        <div class="info-card animate-in">
+          <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg> Support</h3>
+          <ul>
+            <li>Found a bug? <a href="https://github.com/loioloio/Flow-FavManager/issues" target="_blank" rel="noopener"
+                style="color: var(--accent-blue);">Open an Issue on GitHub</a></li>
+            <li>Have a suggestion? Contact us through the <a href="https://github.com/loioloio" target="_blank"
+                rel="noopener" style="color: var(--accent-blue);">form available on the GitHub profile</a>.</li>
+            <li>For the source code, check the <strong>source</strong> branch of the repository.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box animate-in">
+        <h2>Ready to transform your <span class="highlight">favorites</span>?</h2>
+        <p>Download Flow FavManager and discover a new way to organize your Kodi experience.</p>
+        <div class="cta-buttons">
+          <a href="https://github.com/loioloio/Flow-FavManager/releases" target="_blank" rel="noopener"
+            class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download Now
+          </a>
+          <a href="https://github.com/loioloio/Flow-FavManager" target="_blank" rel="noopener"
+            class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            View Repository
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="../icon.png" alt="Flow FavManager">
+          <span>Flow FavManager</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/loioloio/Flow-FavManager" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/loioloio/Flow-FavManager/releases" target="_blank" rel="noopener">Releases</a>
+          <a href="https://github.com/loioloio/Flow-FavManager/issues" target="_blank" rel="noopener">Support</a>
+          <a href="https://github.com/loioloio" target="_blank" rel="noopener">Author</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Flow FavManager &middot; Created by <a href="https://github.com/loioloio" target="_blank"
+          rel="noopener" style="color: var(--accent-blue);">RubénSDFA1labernt</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>

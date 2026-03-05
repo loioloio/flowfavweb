@@ -1,1 +1,1 @@
-[# FlowFavManagerWebsite](https://loioloio.github.io/flowfavmanagerwebsite/)
+[# FlowFavManagerWebsite](https://loioloio.github.io/flowfavweb/)
